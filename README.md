@@ -17,6 +17,7 @@
     ```sh
     main("players",True)
     ```
+
     
 
 - Command line syntax:
