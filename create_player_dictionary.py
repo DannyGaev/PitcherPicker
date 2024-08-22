@@ -58,8 +58,6 @@ def main(file_name='',names=False):
         f.write('\n}')
 
 
-
-
 def get_player_names():
 
     print("[>] Updating list of player names\n[!] This may take up to several minutes\n")
@@ -103,7 +101,6 @@ def get_days_of_games(gamePkData):
             days_of_games -= 1
     days_of_games += 1
     return days_of_games
-
 
 """
 Method will save each player's innings pitched and earned runs to a dictionary, formatted as follows:
@@ -154,12 +151,13 @@ def getData(day,gamePkData,player_names):
                                     player_dict[name] = [[], []]
                                 
                                 # Add innings pitched and earned runs to their respective locations in the player's dictionary entry
-                                if playerIn == "inningsPitched":
-                                    player_dict[name][0].append(
-                                        float(boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"][playerIn]))
-                                elif playerIn == "earnedRuns":
-                                    player_dict[name][1].append(
-                                        float(boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"][playerIn]))
+                                if (float(boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"]["inningsPitched"])!=0.0):
+                                    if playerIn == "inningsPitched":
+                                        player_dict[name][0].append(
+                                            float(boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"][playerIn]))
+                                    elif playerIn == "earnedRuns":
+                                        player_dict[name][1].append(
+                                            float(boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"][playerIn]))
                                     
                                 print(f"[*] SAVED => Name: {name} | ID: {full_id} -> {playerIn}: {boxscore_data["teams"][team]["players"][teamIn]["stats"]["pitching"][playerIn]}")
 
