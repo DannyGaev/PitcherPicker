@@ -22,7 +22,7 @@
 
 - Command line syntax:
     
-    > -fn  : Defines the file name that the dictionary will be saved under&nbsp;
+    > -fn  : Defines the file name that the dictionary will be saved under <br />
     > -names  : Specifies whether the list of desired player names should be updated
   #
     ```sh
