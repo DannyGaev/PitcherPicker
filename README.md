@@ -1,11 +1,23 @@
 # **⚾ PitcherPicker ⚾**
 
-- Using in a script:
-    Importing ![image](https://github.com/user-attachments/assets/d553526a-830d-459f-8afa-7ce3ee13508a)
-
+- Implementing in a script:
+    Importing:
     ```sh
-      from create_player_dictionary import main
+    from create_player_dictionary import main
     ```
+    Default Usage:
+    ```sh
+    main()
+    ```
+    Specifying File Name:
+    ```sh
+    main("players")
+    ```
+    Choosing to update list of players
+    ```sh
+    main("players",True)
+    ```
+    
 
 - Command line syntax:
     - python3 create_player_dictionary.py -fn "{file_name}" -names {true/false}
