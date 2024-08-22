@@ -25,8 +25,7 @@ def main(file_name='',names=False):
 
     # Create a URL to an api endpoint which will contain data for all games from the beginning of the 2024 season leading up to the current date
     currentDate = datetime.datetime.now().strftime("%Y-%m-%d")
-    URL = f"https://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&startDate=2024-03-28&endDate={
-        currentDate}"
+    URL = f"https://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&startDate=2024-03-28&endDate={currentDate}"
     gamePkResponse = requests.get(URL)
     gamePkData = gamePkResponse.json()
     threads = []
@@ -65,8 +64,7 @@ def get_player_names():
     names = []
 
     for page in range(numPages):
-        URL = f'https://www.mlb.com/stats/pitching?split=sp&page={
-            page+1}&playerPool=ALL&sortState=asc'
+        URL = f'https://www.mlb.com/stats/pitching?split=sp&page={page+1}&playerPool=ALL&sortState=asc'
 
         options = Options()
         options.add_argument('--headless=new')
