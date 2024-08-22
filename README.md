@@ -20,4 +20,6 @@
     
 
 - Command line syntax:
-    - python3 create_player_dictionary.py -fn "{file_name}" -names {true/false}
+    ```sh
+    python3 create_player_dictionary.py -fn "{file_name}" -names {true/false}
+    ```
