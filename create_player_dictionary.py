@@ -2,7 +2,6 @@ import requests
 from requests.exceptions import ConnectionError
 import threading
 import time
-import json
 import argparse
 import datetime
 import json
